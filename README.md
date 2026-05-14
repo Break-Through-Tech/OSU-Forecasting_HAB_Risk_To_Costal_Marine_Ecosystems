@@ -153,9 +153,9 @@ Please bring any questions to our first meeting during the week of August 24th (
 
 | Check | Status | Notes |
 |-------|--------|-------|
-| Python Compatibility | GREEN | The project employs a Python-centric tech stack aligned with ML tools suitable for students. |
-| Data Readiness | GREEN | Data appears to be in formats (CSV/TSV and Parquet) that are readily usable by students, minimizing excessive cleaning time. |
-| Resource Check | GREEN | Utilizes free-tier tools like Google Colab, making it accessible without specialized hardware requirements such as GPUs. |
+| Python Compatibility | 🟢 | The project employs a Python-centric tech stack aligned with ML tools suitable for students. |
+| Data Readiness | 🟢 | Data appears to be in formats (CSV/TSV and Parquet) that are readily usable by students, minimizing excessive cleaning time. |
+| Resource Check | 🟢 | Utilizes free-tier tools like Google Colab, making it accessible without specialized hardware requirements such as GPUs. |
 
 **Student Fit Score:** 9/10  
 **Technical Depth Score:** 8/10  
