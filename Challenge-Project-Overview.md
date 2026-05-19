@@ -18,16 +18,23 @@
 
 ---
 
-> ### 🔍 SME Feedback from the BTT Evaluation Team
->
-> *Please address the following by editing this page:*
->
-> - See advisor feedback section below for detailed technical adjustments.
-> - [Additional feedback item]
-> - [Additional feedback item]
->
-> ---
->
+### 🔍 SME Feedback from the Break Through Tech Evaluation Team
+
+*Challenge Advisor: Please address the following feedback by editing this page. Your AI Studio Coach can help make project adjustments as needed, too. In addition to the grey section above, this section should be removed before sharing the repo with your student team.*
+
+| Check | Status | Notes |
+|-------|--------|-------|
+| Python Compatibility | 🟢 | The project employs a Python-centric tech stack aligned with ML tools suitable for students. |
+| Data Readiness | 🟢 | Data appears to be in formats (CSV/TSV and Parquet) that are readily usable by students, minimizing excessive cleaning time. |
+| Resource Check | 🟢 | Utilizes free-tier tools like Google Colab, making it accessible without specialized hardware requirements such as GPUs. |
+
+**Student Fit Score:** 9/10  
+**Technical Depth Score:** 8/10  
+**Overall Recommendation:** APPROVE
+
+**Advisor Feedback Draft:**
+This project has a robust foundation with its focus on a relevant and impactful problem in marine ecosystems. I recommend enhancing the technical specifications around model evaluation strategies to ensure rigorous validation of forecasting performance. Additionally, providing clearer guidelines on the expected outcomes will help align student efforts with project goals. Let's ensure a strong alignment between model implementation and the user needs from the financial risk management perspective to maximize impact.
+
 
 ---
 
@@ -147,24 +154,5 @@ I'm excited to work with you!
 ## ❓ Questions?
 
 Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
-
-
----
-
-## 📋 BTT Internal Evaluation Notes
-*(This section is for BTT staff only — remove before sharing with students)*
-
-| Check | Status | Notes |
-|-------|--------|-------|
-| Python Compatibility | 🟢 | The project employs a Python-centric tech stack aligned with ML tools suitable for students. |
-| Data Readiness | 🟢 | Data appears to be in formats (CSV/TSV and Parquet) that are readily usable by students, minimizing excessive cleaning time. |
-| Resource Check | 🟢 | Utilizes free-tier tools like Google Colab, making it accessible without specialized hardware requirements such as GPUs. |
-
-**Student Fit Score:** 9/10  
-**Technical Depth Score:** 8/10  
-**Overall Recommendation:** APPROVE
-
-**Advisor Feedback Draft:**
-This project has a robust foundation with its focus on a relevant and impactful problem in marine ecosystems. I recommend enhancing the technical specifications around model evaluation strategies to ensure rigorous validation of forecasting performance. Additionally, providing clearer guidelines on the expected outcomes will help align student efforts with project goals. Let's ensure a strong alignment between model implementation and the user needs from the financial risk management perspective to maximize impact.
 
 ---
