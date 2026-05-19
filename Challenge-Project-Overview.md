@@ -15,42 +15,40 @@
 > 
 > ---
 >
-> ### 🔍 SME Feedback from Dr. Uohna
+> ### 🔍 SME Feedback from the BTT Evaluation Team
 >
 > *Please address the following by editing this page:*
 >
-> - [Feedback item #1]
-> - [Feedback item #2]
-> - [Feedback item #3]
+> - See advisor feedback section below for detailed technical adjustments.
+> - [Additional feedback item]
+> - [Additional feedback item]
 >
 > ---
 >
 
 ---
 
-# [Project Title]
+# Forecasting risk of harmful algal blooms in coastal marine ecosystems.
 
-**Company / Org:** [Company / Org Name]  
-**Challenge Advisor:** [Name, Title, Email]  
+**Company / Org:** Oregon State University  
+**Challenge Advisor:** Jack Buckner, bucknejo@oregonstate.edu  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
 
-## 🏢 About [Company / Org Name]
+## 🏢 About Oregon State University
 
-[2-3 sentences about your company: what you do, your industry, etc. You may also choose to specify your specific department or team.]
+Oregon State University is a leading public research university focused on advancing knowledge in various fields, including environmental sciences. The Socio-Environmental Analysis Lab utilizes data analytics and machine learning to address pressing ecological challenges.
 
 ---
 
 ## 🎯 The Challenge
 
 ### Project Summary
-[In 2-3 sentences, describe what you're asking the team to do. Be specific about the type of data, ML techniques, and potential impact.]
-
-> **Example:** "In this project, your team will use customer transaction data and classification algorithms to build a model that predicts which users are likely to churn. This will help our retention team prioritize outreach."
+In this project, you will use oceanographic data from the European Space Agency and machine learning regression models to forecast the risks of harmful algal bloom events (HABs) in coastal marine ecosystems. This will help the Socio-Environmental Analysis Lab at Oregon State University develop insurance and financial risk management tools for coastal and marine industries.
 
 ### Success Criteria
-[What does success look like? Describe evaluation metrics (accuracy, F1 score, etc.) or qualitative outcomes that would make this project valuable to your company.]
+A model that predicts HAB events from environmental data for one or more regions and provides an unbiased estimate of the model's skill when forecasting future events.
 
 ### Project Milestones
 
@@ -58,9 +56,9 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 | Month | Milestone | Key Activities |
 |-------|-----------|----------------|
-| **September** | [e.g., Data Understanding] | [e.g., Explore dataset, handle missing values, document findings] |
-| **October** | [e.g., Model Development] | [e.g., Train baseline model, experiment with approaches, iterate] |
-| **November** | [e.g., Evaluation & Presentation] | [e.g., Finalize model, prepare presentation, document results] |
+| **September** | Data Understanding | Explore dataset, handle missing values, document findings |
+| **October** | Model Development | Train baseline model, experiment with approaches, iterate |
+| **November** | Evaluation & Presentation | Finalize model, prepare presentation, document results |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -69,12 +67,12 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 ## 📊 Dataset
 
 **Name and Source:** [Dataset name and where it's from]  
-**Format:** [e.g., CSV, JSON, images]  
-**Size:** [Approximate size in MB/GB]  
+**Format:** CSV/TSV and Parquet   
+**Size:** 5gb to 10gb  
 **Location:** [Link to dataset or instructions for accessing it]
 
 ### Key Details
-- [Brief description of what's in the data]
+- Numerical, quantitative, time series, geo-spatial, and remote sensing data provided in CSV/TSV and Parquet formats. Sources include internal lab datasets and Copernicus Marine Services.
 - [Any known limitations or preprocessing needed]
 - [Link to data dictionary or documentation, if available]
 
@@ -82,13 +80,18 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** [e.g., Classification, Regression, NLP, Computer Vision, LLM/RAG]
+**ML Problem Type:** Regression, Time Series Analysis, Geo-spatial analysis
 
 **Recommended Libraries:**
-- [e.g., pandas, scikit-learn, TensorFlow, Hugging Face]
+- Scikit-learn
+- TensorFlow
+- Pandas
+- GeoPandas
 
 **Evaluation Metrics:**
-- [e.g., Accuracy, Precision/Recall, RMSE, BLEU score]
+- RMSE
+- MAE
+- R² Score
 
 ---
 
@@ -118,13 +121,13 @@ The following resources will help your team understand the problem space and pot
 ## 🤝 How We'll Work Together
 
 **Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** [e.g., Slack (Break Through Tech workspace) or email]  
-**Response time:** [e.g., Within 48 hours on weekdays]  
+**Communication:** Slack (Break Through Tech workspace)  
+**Response time:** Within 48 hours on weekdays  
 
 **Recommended Tools:**
-- **Coding:** [e.g., Google Colab, VS Code]
-- **Collaboration:** [e.g., GitHub, Notion]
-- **Virtual Meetings:** [e.g., Zoom, Google Meet]
+- **Coding:** Google Colab
+- **Collaboration:** GitHub, Notion
+- **Virtual Meetings:** Zoom, Google Meet
 
 ---
 
@@ -134,10 +137,31 @@ The following resources will help your team understand the problem space and pot
 2. **Begin reviewing the dataset** using the link above
 3. **Read the GitHub Projects documentation** [here](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects)
 
-I’m excited to work with you!
+I'm excited to work with you!
 
 ---
 
 ## ❓ Questions?
 
-Please bring any questions to our first meeting during the week of August 24th (Break Through Tech’s Bridge to Studio - Session B). 
+Please bring any questions to our first meeting during the week of August 24th (Break Through Tech's Bridge to Studio - Session B).
+
+
+---
+
+## 📋 BTT Internal Evaluation Notes
+*(This section is for BTT staff only — remove before sharing with students)*
+
+| Check | Status | Notes |
+|-------|--------|-------|
+| Python Compatibility | 🟢 | The project employs a Python-centric tech stack aligned with ML tools suitable for students. |
+| Data Readiness | 🟢 | Data appears to be in formats (CSV/TSV and Parquet) that are readily usable by students, minimizing excessive cleaning time. |
+| Resource Check | 🟢 | Utilizes free-tier tools like Google Colab, making it accessible without specialized hardware requirements such as GPUs. |
+
+**Student Fit Score:** 9/10  
+**Technical Depth Score:** 8/10  
+**Overall Recommendation:** APPROVE
+
+**Advisor Feedback Draft:**
+This project has a robust foundation with its focus on a relevant and impactful problem in marine ecosystems. I recommend enhancing the technical specifications around model evaluation strategies to ensure rigorous validation of forecasting performance. Additionally, providing clearer guidelines on the expected outcomes will help align student efforts with project goals. Let's ensure a strong alignment between model implementation and the user needs from the financial risk management perspective to maximize impact.
+
+---
