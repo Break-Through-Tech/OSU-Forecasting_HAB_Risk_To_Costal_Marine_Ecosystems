@@ -1,46 +1,6 @@
----
+# Forecasting Risk of Harmful Algal Blooms in Coastal Marine Ecosystems
 
-> ## Challenge Advisor: Update & Finalize Your Project Overview
->
-> > 💡 **These grey text instructions are just for you, the team's Challenge Advisor; please delete them once you have completed the steps below.**
->
-> We've pre-populated this Challenge Project Overview page — which is what will be shared with your Break Through Tech student team in August — using the details from your submission form. You should have received an email inviting you to join this repo as a Collaborator, enabling you to add files and make edits.
-> 
-> In order for your project to be finalized and assigned to a team, please:
-> 1. **Review all sections below** and update or expand any content as needed, making sure to address the SME Feedback in the section immediately below. Look for square brackets to find the places below that require additional inputs from you (e.g., "About [Company / Org Name]").
-> 2. **Add your dataset** to the [data folder](data) in this repo.
-> 3. **Close the Issue assigned to you in this repo** to let us know that you have made your edits and the overview page is ready for final review. You can do this by going to the _Issues_ tab in the top left section of the menu above, add a comment that says "CA review complete", and click the button to Close the Issue. 
->
-> If you're unfamiliar with how to edit a page like this in GitHub, check out [this tutorial](https://ubc-lib-geo.github.io/gis-workshop-waml-template/content/handson/edit-readme.html) for a quick overview (start with step 2 and only edit this page), and [this guide](https://ubc-lib-geo.github.io/gis-workshop-waml-template/content/markdown.html) on how to use Markdown to compose text.
->
->
-> ❌ Remember that this is a public repo. Do NOT include: Proprietary data, PII, API keys, credentials, or anything confidential.
-
----
-
-### 🔍 SME Feedback from the Break Through Tech Evaluation Team
-
-*Challenge Advisor: Please address the following feedback by editing this page. Your AI Studio Coach can help make project adjustments as needed, too. In addition to the grey section above, this section should be removed before sharing the repo with your student team.*
-
-| Check | Status | Notes |
-|-------|--------|-------|
-| Python Compatibility | 🟢 | The project employs a Python-centric tech stack aligned with ML tools suitable for students. |
-| Data Readiness | 🟢 | Data appears to be in formats (CSV/TSV and Parquet) that are readily usable by students, minimizing excessive cleaning time. |
-| Resource Check | 🟢 | Utilizes free-tier tools like Google Colab, making it accessible without specialized hardware requirements such as GPUs. |
-
-**Student Fit Score:** 9/10  
-**Technical Depth Score:** 8/10  
-**Overall Recommendation:** APPROVE
-
-**Advisor Feedback Draft:**
-This project has a robust foundation with its focus on a relevant and impactful problem in marine ecosystems. I recommend enhancing the technical specifications around model evaluation strategies to ensure rigorous validation of forecasting performance. Additionally, providing clearer guidelines on the expected outcomes will help align student efforts with project goals. Let's ensure a strong alignment between model implementation and the user needs from the financial risk management perspective to maximize impact.
-
-
----
-
-# Forecasting risk of harmful algal blooms in coastal marine ecosystems.
-
-**Company / Org:** Oregon State University  
+**Company / Org:** Oregon State University, Socio-Environmental Analysis Lab  
 **Challenge Advisor:** Jack Buckner, bucknejo@oregonstate.edu  
 **Program:** Break Through Tech AI Studio - Fall 2026
 
@@ -48,27 +8,30 @@ This project has a robust foundation with its focus on a relevant and impactful 
 
 ## 🏢 About Oregon State University
 
-Oregon State University is a leading public research university focused on advancing knowledge in various fields, including environmental sciences. The Socio-Environmental Analysis Lab utilizes data analytics and machine learning to address pressing ecological challenges.
+Oregon State University is a leading public research university focused on advancing knowledge in various fields, including environmental sciences. The Socio-Environmental Analysis Lab uses data analytics and machine learning to address pressing ecological challenges.
 
 ---
 
 ## 🎯 The Challenge
 
 ### Project Summary
-In this project, you will use oceanographic data from the European Space Agency and machine learning regression models to forecast the risks of harmful algal bloom events (HABs) in coastal marine ecosystems. This will help the Socio-Environmental Analysis Lab at Oregon State University develop insurance and financial risk management tools for coastal and marine industries.
+In this project, you will use oceanographic data from the European Union's Copernicus Marine Service and machine learning classification models to forecast the risk of harmful algal bloom (HAB) events in coastal marine ecosystems. This will help the Socio-Environmental Analysis Lab at Oregon State University develop insurance and financial risk management tools for coastal and marine industries.
 
 ### Success Criteria
-A model that predicts HAB events from environmental data for one or more regions and provides an unbiased estimate of the model's skill when forecasting future events.
+A globally deployable model that predicts HAB events from environmental data, together with an unbiased estimate of the model's skill when forecasting future events.
 
 ### Project Milestones
-
 Use these milestones to guide your work. Your team will create a **GitHub Projects board** to track tasks within each milestone.
 
 | Month | Milestone | Key Activities |
 |-------|-----------|----------------|
-| **September** | Data Understanding | Explore dataset, handle missing values, document findings |
-| **October** | Model Development | Train baseline model, experiment with approaches, iterate |
-| **November** | Evaluation & Presentation | Finalize model, prepare presentation, document results |
+| **September** | Data understanding | Explore the event dataset and document the temporal and geographic distribution of harmful algae events and their impacts on humans and ecosystems. |
+|               | Feature engineering | Calculate statistics from the Copernicus Marine data to use as predictors in the ML models, including the mean, 95th percentile, and variance of ocean variables over the affected area. |
+|               | Create model-building dataset | Create a processed dataset for model training that includes the target events from HAEDAT and synthetic non-events. Pair these events with the engineered features from the Copernicus Marine data. Separate the dataset into a training set used to build and experiment with models and a validation set to test the model's performance on unseen data. |
+| **October** | Model development | Train a baseline model, then experiment with algorithms and additional features. |
+|             | Model testing | Build a leave-future-out cross-validation pipeline to run on the training data for model tuning and iteration. Avoid using the validation data at this stage. |
+| **November** | Model evaluation | Test the model on the unseen validation dataset and compute final performance metrics. |
+|              | Presentation | Create the final presentation, including background on the economic impacts of harmful algae, the motivation behind the seasonal forecasting system, and key performance metrics that illustrate how the model addresses this need. |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -76,32 +39,38 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 ## 📊 Dataset
 
-**Name and Source:** [Dataset name and where it's from]  
-**Format:** CSV/TSV and Parquet   
-**Size:** 5gb to 10gb  
-**Location:** [Link to dataset or instructions for accessing it]
+**Name and Source:**
+1. [Harmful Algae Event Database (HAEDAT)](https://obis.org/dataset/62ddad25-2a19-485d-9bae-7eb3a40a71c5)
+2. [Global Ocean Physics Analysis and Forecast](https://data.marine.copernicus.eu/products)
+3. [Global Ocean Biogeochemistry Analysis and Forecast](https://data.marine.copernicus.eu/products)
+
+**Format:** CSV and netcdf
+**Size:** 5 GB to 10 GB  
+**Location:**
+You can find a copy of the HAEDAT database in the `data/raw` directory of this GitHub repository. You will access the global ocean data products using the Copernicus Marine Toolbox API, which has both a command line and a Python interface. The `copernicusmarine` directory provides instructions on how to use the Copernicus Marine Toolbox along with examples of basic usage.
 
 ### Key Details
-- Numerical, quantitative, time series, geo-spatial, and remote sensing data provided in CSV/TSV and Parquet formats. Sources include internal lab datasets and Copernicus Marine Services.
-- [Any known limitations or preprocessing needed]
-- [Link to data dictionary or documentation, if available]
+- Numerical, quantitative, time series, geospatial, and remote sensing data provided in CSV/TSV and Parquet formats. Sources include internal lab datasets and the Copernicus Marine Service.
+- Please see the `copernicusmarine` subdirectory for a brief tutorial on loading Copernicus Marine Toolbox data through the Python API. Detailed documentation can be found [here](https://toolbox-docs.marine.copernicus.eu/en/stable/python-interface.html).
 
 ---
 
 ## 🛠️ Suggested Approach
 
-**ML Problem Type:** Regression, Time Series Analysis, Geo-spatial analysis
+**ML Problem Type:** Classification, time series analysis, geospatial analysis
 
 **Recommended Libraries:**
-- Scikit-learn
-- TensorFlow
-- Pandas
-- GeoPandas
+- scikit-learn
+- pandas
+- xarray
+- copernicusmarine
+- matplotlib
+
+**Validation Strategy:** Leave-future-out cross-validation
 
 **Evaluation Metrics:**
-- RMSE
-- MAE
-- R² Score
+- Precision-recall curves
+- F1 score
 
 ---
 
@@ -110,21 +79,16 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 The following resources will help your team understand the problem space and potential technical approaches for this project:
 
 **Background Reading:**
-- [e.g., Link to an article or blog post about the problem domain]
-- [e.g., Link to an industry report or case study]
+- Brenckman et al. 2025, "A Review of Harmful Algal Blooms: Causes, Effects, Monitoring, and Prevention Methods" (see the `literature` folder).
+- [National Oceanic and Atmospheric Administration on the economic impacts of harmful algae](https://coastalscience.noaa.gov/news/total-economic-impact-of-2018-red-tide-now-estimated-at-2-7b/).
 
 **Technical Tutorials:**
-- [e.g., Link to a free tutorial on the ML technique(s) involved]
-- [e.g., Link to documentation for a key library or tool]
-
-**Code Examples:**
-- [e.g., Link to a relevant GitHub repo]
-- [e.g., Link to a sample implementation or starter code]
+- [Tutorial on using the copernicusmarine Python library for data acquisition and visualization](https://help.marine.copernicus.eu/en/articles/4854800-how-to-open-and-visualize-copernicus-marine-data-using-python)
+- [Tutorial for leave-future-out cross-validation](https://towardsdatascience.com/how-to-cross-validation-with-time-series-data-9802a06272c6/)
+- [Tutorial for cross-validation on spatial data](https://towardsdatascience.com/spatial-cross-validation-using-scikit-learn-74cb8ffe0ab9/)
 
 **Other:**
-- [Links to any additional resources — e.g., papers, videos, podcasts, etc.]
-
-*Feel free to explore beyond these, and share anything interesting you find with me!*
+- [Ocean OS, a startup working in this space](https://www.oceanos.earth/)
 
 ---
 
@@ -133,7 +97,6 @@ The following resources will help your team understand the problem space and pot
 **Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
 **Communication:** Slack (Break Through Tech workspace)  
 **Response time:** Within 48 hours on weekdays  
-
 **Recommended Tools:**
 - **Coding:** Google Colab
 - **Collaboration:** GitHub, Notion
