@@ -2,6 +2,7 @@
 
 **Company / Org:** Oregon State University, Socio-Environmental Analysis Lab  
 **Challenge Advisor:** Jack Buckner, bucknejo@oregonstate.edu  
+**AI Studio Coach:** Hrushikesh Shetty, hrushikesh.shetty@breakthroughtech.org   
 **Program:** Break Through Tech AI Studio - Fall 2026
 
 ---
