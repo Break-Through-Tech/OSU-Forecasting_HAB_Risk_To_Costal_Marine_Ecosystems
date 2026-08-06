@@ -32,9 +32,15 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 | **October** | Model development | Train a baseline model, then experiment with algorithms and additional features.  <bf>•Risk Forecasting Modeling & Feature Optimization | • Train predictive classification and time-series models (Random Forest, XGBoost, or LSTM) to forecast HAB risk windows.<br>• Engineer rolling temporal features, seasonal lag variables, and oceanographic interaction terms.<br>• Perform hyperparameter tuning and chronological cross-validation to prevent temporal data leakage. ||
 |             | Model testing | Build a leave-future-out cross-validation pipeline to run on the training data for model tuning and iteration. Avoid using the validation data at this stage. |
 | **November** | Model evaluation | Test the model on the unseen validation dataset and compute final performance metrics. |
-|              | Presentation | Create the final presentation, including background on the economic impacts of harmful algae, the motivation behind the seasonal forecasting system, and key performance metrics that illustrate how the model addresses this need. <br> Model Interpretation, Interactive Map UI & Deliverables | • Apply SHAP value interpretability to identify key environmental drivers of bloom events.<br>• Build an interactive Streamlit dashboard featuring spatial map overlays of regional HAB risk forecasts.<br>• Finalize clean, reproducible GitHub repository, documentation, and stakeholder presentation deck. ||
+|              | Presentation | Create the final presentation, including background on the economic impacts of harmful algae, the motivation behind the seasonal forecasting system, and key performance metrics that illustrate how the model addresses this need. <br> Model Interpretation, Interactive Map UI & Deliverables | • Apply SHAP value interpretability to identify key environmental drivers of bloom events.<br>• Build an interactive Streamlit dashboard featuring spatial map overlays of regional HAB risk forecasts.<br>• Finalize clean, reproducible GitHub repository, documentation, and stakeholder presentation deck. |
+
+### Stretch Goals
+* **Interactive GIS Spatial Overlay:** Integrate Folium / Leaflet interactive mapping within the Streamlit UI to display continuous heatmaps of forecasted HAB risk across coastal coordinates.
+* **Automated Real-Time Alert System:** Build a lightweight script that periodically fetches live Copernicus satellite feeds and auto-triggers risk notifications when environmental thresholds are breached.
+* **Multi-Region Cross-Generalization:** Evaluate model transferability by benchmarking HAB forecasting performance across distinct coastal ecosystems (e.g., Pacific Northwest vs. Gulf of Mexico).
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
+
 
 ---
 
