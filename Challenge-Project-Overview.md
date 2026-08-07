@@ -26,18 +26,13 @@ Use these milestones to guide your work. Your team will create a **GitHub Projec
 
 | Month | Milestone | Key Activities |
 |-------|-----------|----------------|
-| **September** | Data understanding | Explore the event dataset and document the temporal and geographic distribution of harmful algae events and their impacts on humans and ecosystems. <bf>• Integrate Copernicus Marine Service API and oceanographic datasets (sea surface temperature, chlorophyll-a, salinity, winds).<br>• Clean spatial/temporal data, handle missing ocean sensor values, and perform Exploratory Data Analysis (EDA) on bloom occurrences.<br>• Construct spatial-temporal feature vectors and define baseline evaluation metrics (ROC-AUC, Precision-Recall, F1-Score). ||
+| **September** | Data understanding | Explore the event dataset and document the temporal and geographic distribution of harmful algae events and their impacts on humans and ecosystems. |
 |               | Feature engineering | Calculate statistics from the Copernicus Marine data to use as predictors in the ML models, including the mean, 95th percentile, and variance of ocean variables over the affected area. |
 |               | Create model-building dataset | Create a processed dataset for model training that includes the target events from HAEDAT and synthetic non-events. Pair these events with the engineered features from the Copernicus Marine data. Separate the dataset into a training set used to build and experiment with models and a validation set to test the model's performance on unseen data. |
-| **October** | Model development | Train a baseline model, then experiment with algorithms and additional features.  <bf>•Risk Forecasting Modeling & Feature Optimization | • Train predictive classification and time-series models (Random Forest, XGBoost, or LSTM) to forecast HAB risk windows.<br>• Engineer rolling temporal features, seasonal lag variables, and oceanographic interaction terms.<br>• Perform hyperparameter tuning and chronological cross-validation to prevent temporal data leakage. ||
+| **October** | Model development | Train a baseline model, then experiment with algorithms and additional features. |
 |             | Model testing | Build a leave-future-out cross-validation pipeline to run on the training data for model tuning and iteration. Avoid using the validation data at this stage. |
 | **November** | Model evaluation | Test the model on the unseen validation dataset and compute final performance metrics. |
-|              | Presentation | Create the final presentation, including background on the economic impacts of harmful algae, the motivation behind the seasonal forecasting system, and key performance metrics that illustrate how the model addresses this need. <br> Model Interpretation, Interactive Map UI & Deliverables | • Apply SHAP value interpretability to identify key environmental drivers of bloom events.<br>• Build an interactive Streamlit dashboard featuring spatial map overlays of regional HAB risk forecasts.<br>• Finalize clean, reproducible GitHub repository, documentation, and stakeholder presentation deck. |
-
-### Stretch Goals
-* **Interactive GIS Spatial Overlay:** Integrate Folium / Leaflet interactive mapping within the Streamlit UI to display continuous heatmaps of forecasted HAB risk across coastal coordinates.
-* **Automated Real-Time Alert System:** Build a lightweight script that periodically fetches live Copernicus satellite feeds and auto-triggers risk notifications when environmental thresholds are breached.
-* **Multi-Region Cross-Generalization:** Evaluate model transferability by benchmarking HAB forecasting performance across distinct coastal ecosystems (e.g., Pacific Northwest vs. Gulf of Mexico).
+|              | Presentation | Create the final presentation, including background on the economic impacts of harmful algae, the motivation behind the seasonal forecasting system, and key performance metrics that illustrate how the model addresses this need. |
 
 > **Note for the team:** Please create a GitHub Projects board in this repository to break these milestones into weekly tasks. Go to the **Projects** tab → **New project** → Choose **Board** → Add columns for each month.
 
@@ -101,8 +96,8 @@ The following resources will help your team understand the problem space and pot
 
 ## 🤝 How We'll Work Together
 
-**Check-ins:** During our biweekly 60-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** Slack (Break Through Tech workspace)  
+**Check-ins:** During our biweekly 45-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
+**Communication:** Discord (Break Through Tech workspace)  
 **Response time:** Within 48 hours on weekdays  
 **Recommended Tools:**
 - **Coding:** Google Colab
