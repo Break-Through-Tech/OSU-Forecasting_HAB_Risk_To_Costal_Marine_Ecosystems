@@ -96,9 +96,9 @@ The following resources will help your team understand the problem space and pot
 
 ## 🤝 How We'll Work Together
 
-**Check-ins:** During our biweekly 45-min AI Studio Lab Section meeting block (2nd and 4th week of every month)  
-**Communication:** Email: bucknejo@oregonstate.edu
-**Response time:** Within 48 hours on weekdays  
+**Check-ins:** During our biweekly 45-min AI Studio Lab Section meeting block (2nd and 4th week of every month)   
+**Communication:** Email: bucknejo@oregonstate.edu   
+**Response time:** Within 48 hours on weekdays   
 **Recommended Tools:**
 - **Coding:** Google Colab
 - **Collaboration:** GitHub, Notion
